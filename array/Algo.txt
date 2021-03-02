@@ -1,0 +1,11 @@
+DELET_ALL_OCCURENCE(A,N,ITEM)
+This procedure removes an ITEM's all occurences in an Array of size N.
+1. 	Set K :=  0
+2. 	Repeat step 3 for I :=1 to N:
+3.		If A[I] =/= ITEM then:
+			a.  Set A[K] := A[I].
+			b.  Set K := K+1.
+		[ End of If structure.]
+	[ End of step 2 loop.]
+4. 	Set N :=  K.
+5. 	Return.

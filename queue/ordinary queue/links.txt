@@ -1,0 +1,2 @@
+https://www.faceprep.in/c/implementing-queues-using-stacks/
+http://www.btechsmartclass.com/data_structures/queue-using-linked-list.html
