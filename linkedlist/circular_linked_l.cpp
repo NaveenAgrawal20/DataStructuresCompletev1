@@ -104,12 +104,12 @@ struct node* addtoEmpty(struct node *last,int data)
 }
 struct node *addatbeg(struct node *last,int data)
 {
-     struct node *newnode;
-     newnode = new node();
-     newnode->info = data;
-     newnode->link = last->link;
-     last->link = newnode;
-     return last;
+	struct node *newnode;
+	newnode = new node();
+	newnode->info = data;
+	newnode->link = last->link;
+	last->link = newnode;
+	return last;
 }
 struct node *addatend(struct node *last,int data)
 {
