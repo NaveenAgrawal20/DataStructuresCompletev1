@@ -55,3 +55,25 @@ This algo delets a node from a doubly LL.
     6.  [Key Not Present ?]
         Write "key not found" and Return.
 
+3. AddAtPosition
+
+This algo inserts a new node at given position in linked list.
+
+    1.  If AVAIL = NULL: return.
+    2.  Set NEW := AVAIL, AVAIL = NEXT[AVAIL].
+    3.  INFO[NEW] := KEY.
+    4.  [At beginning ?]
+        If POS = 1, then:
+            a.  Set NEXT[NEW] := START and PREV[NEW] := NULL.
+            b.  [Empty ?]
+                If START != NULL, then:
+                Set PREV[START] := NEW.
+            c.  Set START := NEW.
+    5.  [In between]
+        Initalize var I := 1 and P := START.
+        Repeat step 6 while I < POS-1 && P != NULL
+    6.  Set P := NEXT[P].
+    7.  Set NEXT[NEW] := NEXT[P],
+        PREV[NEW] := P,
+        If NEXT[P] != NULL, then PREV[NEXT[P]] := NEW.
+    8.  NEXT[P] := NEW.

@@ -15,7 +15,35 @@ struct node *add_atBeg(struct node *start,int data);
 struct node *add_atEnd(struct node *start,int data);
 struct node *add_Before(struct node *start,int data,int item);
 struct node *add_After(struct node *start,int data,int item);
-struct node *add_atpos(struct node *start,int data,int pos);
+struct node* addPos(struct node *start,int pos,int data)
+{
+    struct node *newnode = (struct node*)malloc(sizeof(struct node));
+    newnode->data = data;
+    if(pos == 1)
+    {
+        newnode->next = start;
+        newnode->prev = NULL;
+        if(start != NULL)
+            start->prev =newnode;
+        start = newnode;
+        return newnode;
+    }
+    struct node *p = start;
+    for(int i = 1;i<pos-1 && p!=NULL;i++)
+    {
+        p = p->next;
+    }
+    if(p == NULL ){
+        printf("INVALID POS");
+        return start;
+    }
+    newnode->next = p->next;
+    newnode->prev = p;
+    if(p->next != NULL)
+        p->next->prev = newnode;
+    p->next = newnode;
+    return start;
+}
 
 struct node *del(struct node *start,int data);
 //
