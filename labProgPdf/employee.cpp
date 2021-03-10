@@ -90,9 +90,9 @@ public:
 int main()
 {
     person p, *per_ptr;
-    admin a, *admin_ptr;
-    account ac, *acc_ptr;
-    master ms, *ms_ptr;
+    admin a;//admin_ptr;
+    account ac;// *acc_ptr;
+    master ms;// *ms_ptr;
     cout << "\nassigning the addr of base class person to base class pointer ";
     per_ptr = &p;
     per_ptr->getdata();
